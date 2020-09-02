@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Linl } from "react-router-dom";
+import "./Join.css";
+import { Link } from "react-router-dom";
 
 function Join() {
   const [name, setName] = useState("");
