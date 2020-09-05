@@ -1,16 +1,16 @@
 import React from "react";
 
-function Message({ message: { user, text }, name }) {
+const Message = ({ message: { user, text }, name }) => {
   let isSentyByCurrentUser = false;
 
   const trimmedName = name.trim().toLowerCase();
 
   if (user === trimmedName) {
-    isSentByCurrentUser = true;
+    isSentyByCurrentUser = true;
   }
   return isSentyByCurrentUser ? (
     <div className="messageContainer justifyEnd">
-      <p className="sentText">{trimmedName}</p>
+      <p className="sentText pr-10">{trimmedName}</p>
       <div className="messageBox">
         <p className="messageText">{text}</p>
       </div>
@@ -21,9 +21,9 @@ function Message({ message: { user, text }, name }) {
       <div className="messageBox">
         <p className="messageText">{text}</p>
       </div>
-      <p className="sentText">{trimmedName}</p>
+      <p className="sentText pl-10">{trimmedName}</p>
     </div>
   );
-}
+};
 
 export default Message;
