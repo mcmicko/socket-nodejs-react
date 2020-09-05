@@ -3,7 +3,7 @@ import "./Input.css";
 
 const Input = ({ message, setMessage, sendMessage }) => {
   return (
-    <form>
+    <form className="form">
       <input
         className="input"
         type="text"
